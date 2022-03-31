@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace SimpleApp.Controllers
@@ -17,7 +18,7 @@ namespace SimpleApp.Controllers
         }
 
         [HttpGet]
-
+        //[EnableCors("Policy1")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetProtocols([FromQuery] ProtocolQuery query)
@@ -34,5 +35,23 @@ namespace SimpleApp.Controllers
 
             return Ok(new { meta, protocols });
         }
+
+        //[HttpGet]
+        //[EnableCors("Policy1")]
+        //public async Task<IActionResult> GetProtocolById(int id)
+        //{
+            //if (_context.Protocols == null)
+                //return BadRequest();
+
+            //var foundProtocol = await _context.Protocols.FindAsync(id).ConfigureAwait(false);
+            //if (foundProtocol == null)
+            //{
+                //return NotFound();
+            //}
+            //return Ok(foundProtocol);
+
+        //}        
+
+        
     }
 }

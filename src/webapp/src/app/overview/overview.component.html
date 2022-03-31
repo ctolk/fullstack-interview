@@ -1,0 +1,56 @@
+<table mat-table [dataSource]="protocols" class="mat-elevation-z8">
+    <ng-container matColumnDef="protocolId">
+        <th mat-header-cell *matHeaderCellDef> ProtocolId </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.protocolId}} </td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fileName">
+        <th mat-header-cell *matHeaderCellDef> FileName </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.fileName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="drawingNumber">
+        <th mat-header-cell *matHeaderCellDef> DrawingNumber </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.drawingNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="partNumber">
+        <th mat-header-cell *matHeaderCellDef> partNumber </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.partNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="orderNumber">
+        <th mat-header-cell *matHeaderCellDef> orderNumber </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.orderNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="workpieceName">
+        <th mat-header-cell *matHeaderCellDef> workpieceName </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.workpieceName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="softwareVersion">
+        <th mat-header-cell *matHeaderCellDef> softwareVersion </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.softwareVersion}} </td>
+    </ng-container>
+    <ng-container matColumnDef="operatorName">
+        <th mat-header-cell *matHeaderCellDef> operatorName </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.operatorName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="cmmNumber">
+        <th mat-header-cell *matHeaderCellDef> cmmNumber </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.cmmNumber}} </td>
+    </ng-container>
+    <ng-container matColumnDef="measuredOn">
+        <th mat-header-cell *matHeaderCellDef> measuredOn </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.measuredOn}} </td>
+    </ng-container>
+    <!-- <ng-container matColumnDef="comments">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let protocol"> {{protocol.comments}} </td>
+    </ng-container> -->
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell>
+            
+        </td>
+    </ng-container>     
+</table>
